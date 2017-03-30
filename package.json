@@ -1,0 +1,36 @@
+{
+  "name": "taco-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "express-jwt": "^5.1.0",
+    "express-session": "^1.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "jwt-express": "^1.1.0",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1",
+    "node-fetch": "^1.6.3",
+    "pg-promise": "^5.6.4",
+    "yelp-fusion": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonrtroy/taco-backend.git"
+  },
+  "author": "Jon Troy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonrtroy/taco-backend/issues"
+  },
+  "homepage": "https://github.com/jonrtroy/taco-backend#readme"
+}
