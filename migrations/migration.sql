@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS community_taco
+DROP TABLE IF EXISTS community_taco;
 DROP TABLE IF EXISTS favorite_taco;
 DROP TABLE IF EXISTS users;
 
