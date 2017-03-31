@@ -1,31 +1,27 @@
-const bcrypt = require('bcrypt');
 const db = require('../config/db');
+const bcrypt = require('bcrypt');
 
-const User = {};
+let User = {};
 
 User.create = (user) => {
-  console.log('User create in model', user)
-  const password = bcrypt.hashSync(user.password_digest, 10);
+  user.password_digest = bcrypt.hashSync(user.password_digest, 10);
   return db.one(`
     INSERT INTO users
     (firstname, lastname, email, password_digest)
     VALUES
-    ($1, $2, $3, $4) RETURNING *`,
+    ($1, $2, $3, $4) RETURNING *
+    `,
     [
       user.firstname,
       user.lastname,
       user.email,
-      password
-    ]);
-}
-
-User.findAll = () => {
-  return db.query(`
-    SELECT * FROM users`);
+      user.password_digest
+    ]
+  );
 };
 
-User.findById = (id) => {
-  return db.oneOrNone(`
+User.findByUserId = (id) => {
+  return db.one(`
     SELECT * FROM users
     WHERE id = $1;`,
     [id]
@@ -33,18 +29,10 @@ User.findById = (id) => {
 };
 
 User.findByEmail = (email) => {
-  return db.oneOrNone(`
+  return db.one(`
     SELECT * FROM users
     WHERE email = $1;`,
     [email]
-  );
-};
-
-User.delete = (user) => {
-  return db.none(`
-    DELETE FROM users
-    WHERE id = $1`,
-    [id]
   );
 };
 

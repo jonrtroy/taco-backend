@@ -10,8 +10,8 @@ controller.taco = (req, res) => {
 
     client.search({
       categories: 'mexican,tacos',
-      location: `${req.params.lat}, ${req.params.lng}`,
-      radius: 750,
+      location: `${req.params.lat}, ${req.params.long}`,
+      radius: 2000,
       open_now: true
     })
     .then((results) => {

@@ -1,15 +1,13 @@
 const router = require('express').Router();
 const controller = require('./controller');
 
-router.get('/', controller.index);
 
-router.get('/new', controller.new);
+router.post('/new', controller.create);
 
 // router.get('/dashboard', controller.authorizeToken);
 
-router.post('/login', controller.login);
+router.post('/login', controller.processLogin);
 
-router.post('/signup', controller.create);
 
 
 
