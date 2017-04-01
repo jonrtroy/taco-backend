@@ -15,6 +15,7 @@ CREATE TABLE users (
 CREATE TABLE favorite_taco (
  id BIGSERIAL PRIMARY KEY,
  name VARCHAR(255) NOT NULL,
+ rating INTEGER DEFAULT 4,
  address VARCHAR(255) NOT NULL,
  phone_number VARCHAR(255) NOT NULL,
  website VARCHAR(255) NOT NULL,
@@ -25,6 +26,7 @@ CREATE TABLE favorite_taco (
 CREATE TABLE community_taco (
  id BIGSERIAL PRIMARY KEY,
  name VARCHAR(255) NOT NULL,
+ rating INTEGER DEFAULT 4,
  address VARCHAR(255) NOT NULL,
  phone_number VARCHAR(255) NOT NULL,
  website VARCHAR(255) NOT NULL,

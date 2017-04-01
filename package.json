@@ -5,9 +5,11 @@
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^1.0.2",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "dotenv": "^4.0.0",
+    "dotenv-webpack": "^1.4.3",
     "express": "^4.15.2",
     "express-jwt": "^5.1.0",
     "express-session": "^1.15.2",

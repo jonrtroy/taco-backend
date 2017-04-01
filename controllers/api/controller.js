@@ -10,7 +10,7 @@ controller.taco = (req, res) => {
 
     client.search({
       categories: 'mexican,tacos',
-      location: `${req.params.lat}, ${req.params.long}`,
+      location: `${req.params.lat}, ${req.params.lng}`,
       radius: 2000,
       open_now: true
     })
@@ -19,6 +19,7 @@ controller.taco = (req, res) => {
     })
     .catch((err) => {
       console.log('ERROR: ', err);
+
     });
   });
 }
