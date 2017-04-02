@@ -57,7 +57,12 @@ controller.processLogin = (req, res) => {
             user_id: user.id
           }, 'taco cat', { expiresIn: '7d' });
           // Respond with JWT token
-          res.json({ token });
+          res.json({ token: {
+            token: token,
+            user_id: user.id,
+            loggedIn: true
+          }
+        });
         } else {
           // Else send status 401
           res.sendStatus(401);
