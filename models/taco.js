@@ -2,6 +2,13 @@ const db = require('../config/db');
 
 const Taco = {};
 
+Taco.findAll = () => {
+  return db.manyOrNone(`
+    SELECT *
+    FROM favorite_taco`
+  );
+}
+
 Taco.addToFavorites = (taco) => {
   return db.none(
     `INSERT INTO favorite_taco

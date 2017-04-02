@@ -2,6 +2,17 @@ const Taco = require('../../models/taco');
 
 const controller = {};
 
+controller.index = (req, res) => {
+  Taco
+  .findAll()
+  .then((data) => {
+    res.json(data);
+  })
+  .catch((err) => {
+    console.log('ERROR', err)
+  });
+}
+
 controller.create = (req, res) => {
   Taco
   .addToFavorites(req.body.taco)
