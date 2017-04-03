@@ -1,6 +1,5 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS community_taco;
 DROP TABLE IF EXISTS favorite_taco;
 DROP TABLE IF EXISTS users;
 
@@ -23,15 +22,5 @@ CREATE TABLE favorite_taco (
  user_id INTEGER REFERENCES users(id)
 );
 
-CREATE TABLE community_taco (
- id BIGSERIAL PRIMARY KEY,
- name VARCHAR(255) NOT NULL,
- rating INTEGER DEFAULT 4,
- address VARCHAR(255) NOT NULL,
- phone_number VARCHAR(255) NOT NULL,
- website VARCHAR(255) NOT NULL,
- price VARCHAR(255) NOT NULL,
- favorite_taco_id INTEGER REFERENCES favorite_taco (id)
-);
 
 COMMIT;

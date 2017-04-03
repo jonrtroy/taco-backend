@@ -6,7 +6,7 @@ controller.index = (req, res) => {
   Taco
   .findAll()
   .then((data) => {
-    res.json(data);
+    res.json(data)
   })
   .catch((err) => {
     console.log('ERROR', err)
