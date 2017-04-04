@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const app = express();
 const jwt = require('jsonwebtoken');
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(cors());
