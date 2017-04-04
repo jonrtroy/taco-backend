@@ -1,9 +1,6 @@
 {
   "name": "taco-backend",
   "version": "1.0.0",
-  "engines": {
-    "node": "7.4.0"
-  },
   "description": "",
   "main": "index.js",
   "dependencies": {
